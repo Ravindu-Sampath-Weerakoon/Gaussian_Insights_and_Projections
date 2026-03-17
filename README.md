@@ -22,10 +22,23 @@ This project provides a step-by-step walkthrough of how linear algebra concepts 
 *   **Cholesky Decomposition:** Sampling from multivariate Gaussians $\mathcal{N}(m, C)$ by finding $A$ such that $AA^T = C$.
 *   **Projected Variance:** Investigating how data variance shifts across different projection angles and its relationship to the covariance matrix's largest eigenvalue.
 
-## 🛠️ Technologies
-*   **Python 3**
-*   **NumPy:** Linear algebra and numerical computing.
-*   **Matplotlib:** Data visualization and mathematical plotting.
+## 🛠️ Technologies & Key Tool Usage
+
+### 📦 NumPy (Numerical Computing)
+Used for high-performance linear algebra and statistical operations:
+*   **`np.linalg.eig`**: To perform eigen-decomposition and extract principal components.
+*   **`np.linalg.cholesky`**: To implement Cholesky Factorization for multivariate sampling.
+*   **`np.dot` & `np.linalg.norm`**: For vector projections and calculating geometric properties.
+*   **`np.random.rand` & `np.random.randn`**: For simulating uniform noise and standard normal distributions.
+*   **`np.var`**: For empirical variance calculation across projected datasets.
+
+### 📊 Matplotlib (Visualization)
+Used to bring mathematical concepts to life:
+*   **`plt.quiver`**: To visualize vectors and their relative angles (orthogonality).
+*   **`plt.hist`**: To demonstrate the Central Limit Theorem through distribution shapes.
+*   **`plt.scatter`**: To plot 2D point clouds representing multivariate Gaussian distributions.
+*   **`plt.subplot`**: To compare "Before" (Standard Noise) and "After" (Covariance Transformation) states side-by-side.
+*   **`plt.axhline` & `plt.axvline`**: To provide clear geometric references for the origin and axes.
 
 ## 📈 Visual Insights
 The included Jupyter Notebook contains several visualizations:
